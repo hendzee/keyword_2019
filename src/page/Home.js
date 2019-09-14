@@ -112,7 +112,7 @@ class Home extends Component{
                     <HeaderButton onPress={navigation.getParam('deleteHandler')}>
                         <Image 
                             source={require('../img/delete.png')} 
-                            style={{ width: 31, height: 31, tintColor: '#ffffff' }}                                             
+                            style={{ width: 25, height: 25, tintColor: '#ffffff' }}                                             
                         />
                     </HeaderButton>
                 </View>
@@ -202,8 +202,10 @@ const styles = {
         fontFamily: 'quicksand-medium'
     },
     imgInfo: {
-        marginTop: -30,
-        marginBottom: 30
+        marginTop: -10,
+        marginBottom: 30,
+        width: 200,
+        height: 200
     },
     styIcon: {        
         height: 17,

@@ -106,7 +106,7 @@ class Preview extends Component{
 
     getMainContent = () => {
         let content = null;
-        const { styEmptyList, styThin, styBold } = styles;
+        const { styEmptyList, styThin, styBold, imgInfo } = styles;
 
         if (this.state.numberKey > 0){
             content = (
@@ -114,8 +114,9 @@ class Preview extends Component{
             );
         }else {
             content = (
-                <View style={styEmptyList}>                   
-                    <Text style={styBold}>LIST IS EMPTY</Text>
+                <View style={styEmptyList}> 
+                    <Image style={imgInfo} source={require('../img/empty_list.png')} />                  
+                    <Text style={styBold}>Empty List</Text>
                     <Text style={styThin}>Create min 1 abbrevation</Text>
                 </View>
             );
@@ -196,7 +197,13 @@ const styles = {
     styKeyword: {
         flexDirection: "row",
         marginBottom: 20
-    }
+    },
+    imgInfo: {
+        marginTop: -10,
+        marginBottom: 30,
+        width: 200,
+        height: 200
+    },
 }
 
 export { Preview }
